@@ -14,7 +14,7 @@ import cv2
 from YOLO_Video import video_detection
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'muhammadmoin'
+app.config['SECRET_KEY'] = 'fbrandao2k'
 #Generate_frames function takes path of input video file and  gives us the output with bounding boxes
 # around detected objects
 

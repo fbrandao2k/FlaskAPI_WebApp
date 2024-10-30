@@ -16,14 +16,9 @@ Here’s an overview of what this code accomplishes:
 Sets up a Flask web server with two main routes (/video and /webcam).
 The generate_frames function handles video processing by passing a video file or webcam feed through a YOLO model (defined in YOLO_Video.py) and outputs frames with bounding boxes drawn around detected objects.
 The output is then streamed as an MJPEG video over HTTP.
-YOLO_Video.py:
-
-Uses YOLO (You Only Look Once) v8 for real-time object detection.
-The video_detection function reads frames from a video file or webcam feed, processes each frame with the YOLO model to identify objects, and draws bounding boxes with labels (object name and confidence).
-Detected frames are then streamed back to flaskapp.py for HTTP delivery.
-Code Breakdown
-In flaskapp.py:
-
+<br>
+Code Breakdown of flaskapp.py:
+<br>
 The Flask library handles the web server.
 generate_frames:
 Passes a video path to video_detection (from YOLO_Video.py).
@@ -33,6 +28,13 @@ Routes:
 /webcam: Streams a live webcam feed.
 
 ### YOLO_Video.py:
+
+Uses YOLO (You Only Look Once) v8 for real-time object detection.
+The video_detection function reads frames from a video file or webcam feed, processes each frame with the YOLO model to identify objects, and draws bounding boxes with labels (object name and confidence).
+Detected frames are then streamed back to flaskapp.py for HTTP delivery.
+<br>
+Code Breakdown of YOLO_Video.py:
+<br>
 
 video_detection:
 Initializes YOLO v8 with a weights file to detect various object classes (e.g., people, cars).
